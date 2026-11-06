@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #f1f5f9;
+    color: #17243b;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.barra {
+    background: #17243b;
+    color: white;
+}
+.barra-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 1080px;
+    margin: auto;
+    padding: 16px 24px;
+}
+.barra a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.barra .marca {
+    margin-right: auto;
+}
+.conteudo,
+.rodape {
+    max-width: 1080px;
+    margin: auto;
+    padding: 24px;
+}
+.cabecalho {
+    margin-bottom: 32px;
+}
+h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+.etiqueta {
+    color: #315dd4;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+.colunas {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 24px;
+}
+.painel,
+.card {
+    padding: 20px;
+    border: 1px solid #d5ddec;
+    border-radius: 16px;
+    background: white;
+}
+.painel h2,
+.colunas section > h2 {
+    margin-top: 0;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #8695ab;
+    border-radius: 8px;
+    font: inherit;
+}
+button {
+    padding: 10px 16px;
+    border: 1px solid #315dd4;
+    border-radius: 8px;
+    background: white;
+    color: #2449ad;
+    font: inherit;
+    cursor: pointer;
+}
+.botao-enviar {
+    background: #315dd4;
+    color: white;
+}
+img {
+    display: block;
+    width: 100%;
+    max-height: 220px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.card-conteudo {
+    padding-top: 16px;
+}
+.texto-ajuda,
+.rodape {
+    color: #526078;
+    font-size: 0.9rem;
+}
+.mensagem {
+    min-height: 3em;
+    margin-top: 16px;
+}
+body.tema-escuro {
+    background: #111a2c;
+    color: #eff4ff;
+}
+.tema-escuro .painel,
+.tema-escuro .card {
+    border-color: #62718a;
+    background: #202e46;
+    color: #eff4ff;
+}
+.tema-escuro .texto-ajuda,
+.tema-escuro .rodape {
+    color: #c3cfe2;
+}
+.tema-escuro .etiqueta {
+    color: #a9c2ff;
+}
+.destaque {
+    outline: 4px solid #597fec;
+}
+.erro {
+    color: #b42318;
+    font-weight: bold;
+}
+.sucesso {
+    color: #167047;
+    font-weight: bold;
+}
+.tema-escuro .erro {
+    color: #ffb4ad;
+}
+.tema-escuro .sucesso {
+    color: #92e5bd;
+}
+input[aria-invalid="true"] {
+    border: 2px solid #b42318;
+}
+:focus-visible {
+    outline: 3px solid #597fec;
+    outline-offset: 3px;
+}
+@media (max-width: 767px) {
+    .colunas {
+        grid-template-columns: 1fr;
+    }
+    .barra-conteudo {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .barra .marca {
+        width: 100%;
+    }
+}

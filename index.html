@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de personagens — JavaScript puro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="barra" aria-label="Navegação principal">
+        <div class="barra-conteudo">
+            <a class="marca" href="index.html">Explorador</a>
+            <a class="link-versao" href="">Ver versão com Bootstrap</a>
+            <button id="botao-tema" type="button" aria-pressed="false">Alternar tema</button>
+        </div>
+    </nav>
+    <main class="conteudo">
+        <header class="cabecalho">
+            <p class="etiqueta">LABORATÓRIO DE INTERFACES</p>
+            <h1>Explore um personagem</h1>
+            <p>Digite um nome e personalize o card. A busca por API será adicionada em outra aula.</p>
+        </header>
+        <div class="colunas">
+            <section aria-labelledby="titulo-pesquisa">
+                <div class="painel">
+                    <h2 id="titulo-pesquisa">Sua pesquisa</h2>
+                    <form id="formulario" novalidate>
+                        <label for="pesquisa">Nome do personagem</label>
+                        <input
+                            id="pesquisa"
+                            name="personagem"
+                            type="text"
+                            maxlength="40"
+                            aria-describedby="contador mensagem"
+                            placeholder="Ex.: Mario"
+                        >
+                        <p id="contador" class="texto-ajuda">0 / 40 caracteres</p>
+                        <button class="botao-enviar" type="submit">Buscar personagem</button>
+                    </form>
+                    <p id="mensagem" class="mensagem" aria-live="polite">Aguardando sua pesquisa.</p>
+                </div>
+            </section>
+            <section aria-labelledby="titulo-resultado">
+                <h2 id="titulo-resultado">Resultado</h2>
+                <article id="card" class="card">
+                    <img
+                        id="imagem"
+                        src="../imagens/inicial.svg"
+                        alt="Silhueta de personagem aguardando pesquisa"
+                    >
+                    <div class="card-conteudo">
+                        <h3 id="nome">Seu personagem aparece aqui</h3>
+                        <p id="descricao">Preencha o campo e envie o formulário.</p>
+                        <button id="botao-destaque" type="button" aria-pressed="false">
+                            Destacar card
+                        </button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="rodape">Projeto de aula · HTML, CSS e JavaScript puro</footer>
+</body>
+</html>
